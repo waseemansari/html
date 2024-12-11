@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+    <meta name="generator" content="Hugo 0.122.0" />
+    <title>Dashboard</title>
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="assets/dashboard.css" rel="stylesheet" />
+    <link href="assets/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="p-0 shadow" data-bs-theme="dark">
+        <div id="navbarSearch" class="navbar-search w-100 collapse">
+            <input class="form-control w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search" />
+        </div>
+    </header>
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="sidebar col-md-3 col-lg-2 p-0 bg-body-tertiary position-fixed">
+                <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu"
+                    aria-labelledby="sidebarMenuLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            data-bs-target="#sidebarMenu" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto sidebar-bg">
+                        <ul class="nav flex-column text-white">
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-2" href="favorites.html">
+                                    <img src="assets/images/fav.svg" class="menu-icon" alt="..." />
+                                    Favorites
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link d-flex align-items-center gap-2" data-bs-toggle="collapse"
+                                    href="#collapseExample" role="button" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    <img src="assets/images/menu.svg" class="menu-icon" alt="..." />
+                                    Menu
+                                </a>
+
+                                <div class="collapse" id="collapseExample">
+                                    <div class="collepse-bg card card-body filteroverflow">
+
+
+
+                                        <div>
+                                            <div>
+                                                <span class="float-start text-left text-white">1 Mile</span>
+                                                <span class="float-end text-right greytext">500+ Miles</span>
+                                            </div>
+                                            <div class="mt-10">
+                                                <input type="range" class="form-range" id="customRange1">
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <div>
+                                            <div>
+                                                <span class="float-start text-left text-white">Age</span>
+                                                <span class="float-end text-right greytext">18-50</span>
+                                            </div>
+                                            <div class="mt-10">
+                                                <input type="range" class="form-range" id="customRange1">
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+
+                                        <div>
+                                            <div>
+                                                <span class="float-start text-left text-white">Role</span>
+                                            </div>
+                                            <div class="mt-10">
+                                                <div class="">
+                                                    <span class="float-start text-left text-white">Caucasian</span>
+                                                    <div class="form-check form-switch custom-switch">
+                                                        <input class="form-check-input float-end" type="checkbox"
+                                                            id="flexSwitchCheckDefault">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <div class="">
+                                                    <span class="float-start text-left text-white">Asian</span>
+                                                    <div class="form-check form-switch custom-switch">
+                                                        <input class="form-check-input float-end" type="checkbox"
+                                                            id="flexSwitchCheckDefault">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <div class="">
+                                                    <span class="float-start text-left text-white">Latin/Hispanic</span>
+                                                    <div class="form-check form-switch custom-switch">
+                                                        <input class="form-check-input float-end" type="checkbox"
+                                                            id="flexSwitchCheckDefault">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <div class="">
+                                                    <span class="float-start text-left text-white">Black</span>
+                                                    <div class="form-check form-switch custom-switch">
+                                                        <input class="form-check-input float-end" type="checkbox"
+                                                            id="flexSwitchCheckDefault">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <div class="">
+                                                    <span class="float-start text-left text-white">Indian</span>
+                                                    <div class="form-check form-switch custom-switch">
+                                                        <input class="form-check-input float-end" type="checkbox"
+                                                            id="flexSwitchCheckDefault">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <div class="">
+                                                    <span class="float-start text-left text-white">Other</span>
+                                                    <div class="form-check form-switch custom-switch">
+                                                        <input class="form-check-input float-end" type="checkbox"
+                                                            id="flexSwitchCheckDefault">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <div class="">
+                                                    <span class="float-start text-left text-white">Top</span>
+                                                    <div class="form-check form-switch custom-switch">
+                                                        <input class="form-check-input float-end" type="checkbox"
+                                                            id="flexSwitchCheckDefault">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <div class="">
+                                                    <span class="float-start text-left text-white">Bottom</span>
+                                                    <div class="form-check form-switch custom-switch">
+                                                        <input class="form-check-input float-end" type="checkbox"
+                                                            id="flexSwitchCheckDefault">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+
+                                            <div class="d-grid gap-2 col-12 mx-auto">
+                                                <button class="btn btn-search" type="button">SEARCH</button>
+                                            </div>
+
+
+
+
+
+
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-2" href="info.html">
+                                    <img src="assets/images/info.svg" class="menu-icon" alt="..." />
+                                    Info
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- sidebar -->
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6">
+
+                            <div class="cardhead-bg top-headers">
+
+                                <div class="row">
+                                    <div class="col-2 col-sm-2 col-md-2">
+                                        <div class="p-2 bd-highlight text-center">
+                                            <a class="" data-bs-toggle="collapse" href="#notificationitem" role="button"
+                                                aria-expanded="false" aria-controls="collapseExample">
+                                                <img src="assets/images/filter.svg" class="filter-img" alt="..." />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-8 col-sm-8 col-md-8">
+                                        <div class="p-2 bd-highlight text-center">
+                                            <a href="index.html">
+                                              <img src="assets/images/logo.svg" class="menu-logo" alt="..." />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 col-sm-2 col-md-2">
+                                        <div class="p-2 bd-highlight text-center">
+                                            <img src="assets/images/profile-icon.svg" class=" " alt="..." />
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="collapse colpbiesnotification " id="notificationitem">
+                                <div class=" bropareabg  p-4">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control customfeald" id="floatingInput vust" placeholder="name@example.com">
+                                        <label class="labeler" for="floatingInput">Email address</label>
+                                      </div>
+                                      <div class="tagarea mt-2">
+                                        <dev class="heading-type">Types</dev><br>
+                                        <small class="text-muted text-white">Identify your body and personality type</small>
+                                        <div class="tags mt-2">
+                                            <span class="badge rounded-pill bg-customtag">JOCK</span>
+                                            <span class="badge rounded-pill bg-customtag">DILF</span>
+                                            <span class="badge rounded-pill bg-customtag">FRESHF</span>
+                                            <span class="badge rounded-pill bg-customtag">CHUBBY</span>
+                                            <span class="badge rounded-pill bg-customtag">FEM</span>
+                                            <span class="badge rounded-pill bg-customtag">FURRY</span>
+                                            <span class="badge rounded-pill bg-customtag">MUSCLE</span>
+                                            <span class="badge rounded-pill bg-customtag">MASCULINE</span>
+                                            <span class="badge rounded-pill bg-customtag">SMOOTH</span>
+                                            <span class="badge rounded-pill bg-customtag">FUNNY</span>
+                                            <span class="badge rounded-pill bg-customtag">BIG ASS</span>
+                                            <span class="badge rounded-pill bg-customtag">BIG COCK</span>
+                                            <span class="badge rounded-pill bg-customtag">TATTOOED</span>
+                                        </div>
+                                        <hr>
+
+                                        <dev class="heading-type">Tags</dev><br>
+                                        <small class="text-muted text-white">Select tags identifying the type of content you create</small>
+                                        <div class="tags mt-2">
+                                            <span class="badge rounded-pill bg-customtag">FISTING</span>
+                                            <span class="badge rounded-pill bg-customtag">GROUP</span>
+                                            <span class="badge rounded-pill bg-customtag">FEET</span>
+                                            <span class="badge rounded-pill bg-customtag">ROLE PLAY</span>
+                                            <span class="badge rounded-pill bg-customtag">AMATEUR</span>
+                                            <span class="badge rounded-pill bg-customtag">BONDAGE</span>
+                                            <span class="badge rounded-pill bg-customtag">COSPLAY</span>
+                                            <span class="badge rounded-pill bg-customtag">ANAL</span>
+                                            <span class="badge rounded-pill bg-customtag">ORAL</span>
+                                            <span class="badge rounded-pill bg-customtag">HARDCORE</span>
+                                            <span class="badge rounded-pill bg-customtag">MASTURBATION</span>
+                                            <span class="badge rounded-pill bg-customtag">PISSING</span>
+                                            <span class="badge rounded-pill bg-customtag">POV</span>
+                                        </div>
+<hr>
+<div class="d-grid gap-2 col-12 mx-auto">
+    <button class="btn btn-search" type="button">SEARCH</button>
+</div>
+
+
+                                      </div>
+
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="container mt-10">
+                        <div class="row">
+                            <div class="col">
+
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 mt-5">
+
+
+                                <div class="mein-topheading ">
+                                    Peoples
+                                </div>
+                                <div>
+
+
+                                    <div class="row overflow-productssection ">
+                                        <div class="col-4 col-sm-4 col-md-4">
+                                            <div class="p-2 bd-highlight text-center">
+                                                <a class="" data-bs-toggle="modal" href="#exampleModalToggle1"
+                                                    role="button">
+                                                    <img src="assets/images/image-gallery/1.svg" class="img-100per"
+                                                        alt="...">
+                                                </a>
+                                            </div>
+                                            <p class="text-center gallery-heading">Semen</p>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4">
+                                            <div class="p-2 bd-highlight text-center">
+                                                <img src="assets/images/image-gallery/2.svg" class="img-100per"
+                                                    alt="...">
+                                                <p class="text-center gallery-heading">Semen</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4">
+                                            <div class="p-2 bd-highlight text-center">
+                                                <img src="assets/images/image-gallery/3.svg" class="img-100per "
+                                                    alt="...">
+                                                <p class="text-center gallery-heading">Semen</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 col-sm-4 col-md-4">
+                                            <div class="p-2 bd-highlight text-center">
+                                                <img src="assets/images/image-gallery/4.svg" class="img-100per"
+                                                    alt="...">
+                                            </div>
+                                            <p class="text-center gallery-heading">Semen</p>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4">
+                                            <div class="p-2 bd-highlight text-center">
+                                                <img src="assets/images/image-gallery/5.svg" class="img-100per"
+                                                    alt="...">
+                                                <p class="text-center gallery-heading">Gloria Palms</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4">
+                                            <div class="p-2 bd-highlight text-center">
+                                                <img src="assets/images/image-gallery/6.svg" class="img-100per "
+                                                    alt="...">
+                                                <p class="text-center gallery-heading">Paul Landers</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-4 col-sm-4 col-md-4">
+                                            <div class="p-2 bd-highlight text-center">
+                                                <img src="assets/images/image-gallery/7.svg" class="img-100per"
+                                                    alt="...">
+                                            </div>
+                                            <p class="text-center gallery-heading">Semen</p>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4">
+                                            <div class="p-2 bd-highlight text-center">
+                                                <img src="assets/images/image-gallery/8.svg" class="img-100per"
+                                                    alt="...">
+                                                <p class="text-center gallery-heading">Gloria Palms</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4">
+                                            <div class="p-2 bd-highlight text-center">
+                                                <img src="assets/images/image-gallery/9.svg" class="img-100per "
+                                                    alt="...">
+                                                <p class="text-center gallery-heading">Paul Landers</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 col-sm-4 col-md-4">
+                                            <div class="p-2 bd-highlight text-center">
+                                                <img src="assets/images/image-gallery/10.svg" class="img-100per"
+                                                    alt="...">
+                                            </div>
+                                            <p class="text-center gallery-heading">Semen</p>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4">
+                                            <div class="p-2 bd-highlight text-center">
+                                                <img src="assets/images/image-gallery/11.svg" class="img-100per"
+                                                    alt="...">
+                                                <p class="text-center gallery-heading">Gloria Palms</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4">
+                                            <div class="p-2 bd-highlight text-center">
+                                                <img src="assets/images/image-gallery/12.svg" class=" img-100per"
+                                                    alt="...">
+                                                <p class="text-center gallery-heading">Paul Landers</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+
+
+                            </div>
+                            <div class="col">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <footer class="footer mt-auto   menuon-mobile">
+                    <div class="container">
+                        <nav class=" ">
+                            <div class="">
+
+
+                                <div class="">
+                                    <div class="row">
+                                        <div class="col text-center">
+
+                                            <a class="nav-link  align-items-center gap-2" href="#">
+                                                <img src="assets/images/fav.svg" class="menu-icon" alt="..." />
+                                                <div class="mobile-menusize">Favorites</div>
+                                            </a>
+
+                                        </div>
+                                        <div class="col text-center">
+                                            <a class="nav-link  align-items-center gap-2" data-bs-toggle="modal"
+                                                href="#exampleModalToggle" role="button">
+                                                <img src="assets/images/menu.svg" class="menu-icon" alt="..." />
+                                                <div class="mobile-menusize">Menu</div>
+                                            </a>
+
+
+                                        </div>
+                                        <div class="col text-center">
+
+                                            <a class="nav-link  align-items-center gap-2" href="#">
+                                                <img src="assets/images/info.svg" class="menu-icon" alt="..." />
+                                                <div class="mobile-menusize">Info</div>
+                                            </a>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </footer>
+
+
+        </div>
+
+        <!-- popup -->
+
+        <div class="modal fade popppsdivmjdjje" id="exampleModalToggle" aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered  ">
+                <div class="modal-content mobilepopupbg ">
+                    <!-- <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    <div class="modal-header">
+                        <h5 class="modal-title text-center  " id="exampleModalToggleLabel">TOGGLE</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="  filteroverflow">
+                            <div>
+                                <div>
+                                    <span class="float-start text-left text-white">1 Mile</span>
+                                    <span class="float-end text-right greytext">500+ Miles</span>
+                                </div>
+                                <div class="mt-10">
+                                    <input type="range" class="form-range custom-range" id="customRange1">
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <div>
+                                    <span class="float-start text-left text-white">Age</span>
+                                    <span class="float-end text-right greytext">18-50</span>
+                                </div>
+                                <div class="mt-10">
+                                    <input type="range" class="form-range custom-range" id="customRange1">
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <div>
+                                    <span class="float-start text-left text-white">Role</span>
+                                </div>
+                                <div class="mt-10">
+                                    <div class="">
+                                        <span class="float-start text-left text-white">Caucasian</span>
+                                        <div class="form-check form-switch custom-switch">
+                                            <input class="form-check-input float-end" type="checkbox"
+                                                id="flexSwitchCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="">
+                                        <span class="float-start text-left text-white">Asian</span>
+                                        <div class="form-check form-switch custom-switch">
+                                            <input class="form-check-input float-end" type="checkbox"
+                                                id="flexSwitchCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <div class="">
+                                        <span class="float-start text-left text-white">Latin/Hispanic</span>
+                                        <div class="form-check form-switch custom-switch">
+                                            <input class="form-check-input float-end" type="checkbox"
+                                                id="flexSwitchCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <div class="">
+                                        <span class="float-start text-left text-white">Black</span>
+                                        <div class="form-check form-switch custom-switch">
+                                            <input class="form-check-input float-end" type="checkbox"
+                                                id="flexSwitchCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <div class="">
+                                        <span class="float-start text-left text-white">Indian</span>
+                                        <div class="form-check form-switch custom-switch">
+                                            <input class="form-check-input float-end" type="checkbox"
+                                                id="flexSwitchCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <div class="">
+                                        <span class="float-start text-left text-white">Other</span>
+                                        <div class="form-check form-switch custom-switch">
+                                            <input class="form-check-input float-end" type="checkbox"
+                                                id="flexSwitchCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <div class="">
+                                        <span class="float-start text-left text-white">Top</span>
+                                        <div class="form-check form-switch custom-switch">
+                                            <input class="form-check-input float-end" type="checkbox"
+                                                id="flexSwitchCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <div class="">
+                                        <span class="float-start text-left text-white">Bottom</span>
+                                        <div class="form-check form-switch custom-switch">
+                                            <input class="form-check-input float-end" type="checkbox"
+                                                id="flexSwitchCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <div class="d-grid gap-2 col-12 mx-auto">
+                                    <button class="btn btn-search" data-bs-target="#exampleModalToggle2"
+                                        data-bs-toggle="modal" data-bs-dismiss="modal">SEARCH</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Pop 2 -->
+
+        <div class="modal fade popppsdivmjdjje" id="exampleModalToggle1" aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered ">
+                <div class="modal-content  ">
+                    <div class="popup-widtharea"
+                        style="background-image: url(assets/images/image.png); background-repeat: no-repeat;">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-center text-white" id="exampleModalToggleLabel">SHOW ME</h5>
+                            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                        </div>
+                        <div class="modal-body no-border" style="padding-top: 0px;">
+                            <div class="check-boxarea">
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class=" checkboxtext">
+                                        GAY
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class=" checkboxtext">
+                                        BISEXUAL
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class=" checkboxtext">
+                                        STRAIGHT
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class=" checkboxtext">
+                                        TRANS
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class=" checkboxtext">
+                                        HIV UNDECTABLE
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div class="textarea-appo glassbgs text-center commentsareas">
+                                *red revise mock-upThesemen.orgwebsites is transparent ie non members area is the same
+                                as themembers area except communication with other Semen is not available to nonmembers
+                                visiting the website*red revise mock-up Thesemen.orgwebsites is transparent ie non
+                                members area is the same as themembers area except communication*red revise
+                                mock-upThesemen.orgwebsites is transparent ie non members area is the same as themembers
+                                area except communication with other Semen is not available to nonmembers visiting the
+                                website*red revise mock-up Thesemen.orgwebsites is transparent ie non members area is
+                                the same as themembers area except communication with other Semen is not available to
+                                nonmembers visiting the website *red revise mock-upThesemen.orgwebsites is transparent
+                                ie
+
+                            </div>
+
+                            <div class="d-grid gap-2 col-12 mx-auto mt-4">
+                                <button class="btn btn-search" type="button">
+                                    <span class="agretext">I AGREE</span> <img src="assets/images/swapicon.svg" class=""
+                                        alt="...">
+                                </button>
+                                <button class="btn btn-exit mt-2 mb-3" data-bs-target="#exampleModalToggle2"
+                                    data-bs-toggle="modal" data-bs-dismiss="modal">
+                                    <span class="agretext">EXIT</span>
+                                </button>
+                            </div>
+
+
+                        </div>
+                        <br /> <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        </main>
+    </div>
+    </div>
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/dashboard.js"></script>
+</body>
+
+</html>
