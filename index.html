@@ -1,696 +1,403 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<!DOCTYPE HTML>
+<html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
-    <meta name="generator" content="Hugo 0.122.0" />
-    <title>Dashboard</title>
-    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Woven Label</title>
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<script type='text/javascript' src="js/jquery-1.11.1.min.js"></script>
+	<!-- Custom Theme files -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<!-- Custom Theme files -->
+	<!--//theme-style-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="woven tags, woven label,school tag,school batch" />
+	<!-- start menu -->
+	<script type="text/javascript" src="js/bootstrap.js"></script>
 
-    <link href="assets/dashboard.css" rel="stylesheet" />
-    <link href="assets/style.css" rel="stylesheet" />
+	<script src="js/simpleCart.min.js"> </script>
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		$(function () {
+			$("#slider").responsiveSlides({
+				auto: true,
+				nav: true,
+				speed: 500,
+				namespace: "callbacks",
+				pager: true,
+			});
+		});
+
+	</script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+			*/
+			$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
 </head>
 
 <body>
-    <header class="p-0 shadow" data-bs-theme="dark">
-        <div id="navbarSearch" class="navbar-search w-100 collapse">
-            <input class="form-control w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search" />
-        </div>
-    </header>
-
-
-
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="sidebar col-md-3 col-lg-2 p-0 bg-body-tertiary position-fixed">
-                <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu"
-                    aria-labelledby="sidebarMenuLabel">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                            data-bs-target="#sidebarMenu" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto sidebar-bg">
-                        <ul class="nav flex-column text-white">
-                            <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="favorites.html">
-                                    <img src="assets/images/fav.svg" class="menu-icon" alt="..." />
-                                    Favorites
-                                </a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link d-flex align-items-center gap-2" data-bs-toggle="collapse"
-                                    href="#collapseExample" role="button" aria-expanded="false"
-                                    aria-controls="collapseExample">
-                                    <img src="assets/images/menu.svg" class="menu-icon" alt="..." />
-                                    Menu
-                                </a>
-
-                                <div class="collapse" id="collapseExample">
-                                    <div class="collepse-bg card card-body filteroverflow">
-
-
-
-                                        <div>
-                                            <div>
-                                                <span class="float-start text-left text-white">1 Mile</span>
-                                                <span class="float-end text-right greytext">500+ Miles</span>
-                                            </div>
-                                            <div class="mt-10">
-                                                <input type="range" class="form-range" id="customRange1">
-                                            </div>
-                                        </div>
-
-                                        <hr>
-
-                                        <div>
-                                            <div>
-                                                <span class="float-start text-left text-white">Age</span>
-                                                <span class="float-end text-right greytext">18-50</span>
-                                            </div>
-                                            <div class="mt-10">
-                                                <input type="range" class="form-range" id="customRange1">
-                                            </div>
-                                        </div>
-
-                                        <hr>
-
-
-                                        <div>
-                                            <div>
-                                                <span class="float-start text-left text-white">Role</span>
-                                            </div>
-                                            <div class="mt-10">
-                                                <div class="">
-                                                    <span class="float-start text-left text-white">Caucasian</span>
-                                                    <div class="form-check form-switch custom-switch">
-                                                        <input class="form-check-input float-end" type="checkbox"
-                                                            id="flexSwitchCheckDefault">
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                            <div class="mt-4">
-                                                <div class="">
-                                                    <span class="float-start text-left text-white">Asian</span>
-                                                    <div class="form-check form-switch custom-switch">
-                                                        <input class="form-check-input float-end" type="checkbox"
-                                                            id="flexSwitchCheckDefault">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="mt-4">
-                                                <div class="">
-                                                    <span class="float-start text-left text-white">Latin/Hispanic</span>
-                                                    <div class="form-check form-switch custom-switch">
-                                                        <input class="form-check-input float-end" type="checkbox"
-                                                            id="flexSwitchCheckDefault">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="mt-4">
-                                                <div class="">
-                                                    <span class="float-start text-left text-white">Black</span>
-                                                    <div class="form-check form-switch custom-switch">
-                                                        <input class="form-check-input float-end" type="checkbox"
-                                                            id="flexSwitchCheckDefault">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="mt-4">
-                                                <div class="">
-                                                    <span class="float-start text-left text-white">Indian</span>
-                                                    <div class="form-check form-switch custom-switch">
-                                                        <input class="form-check-input float-end" type="checkbox"
-                                                            id="flexSwitchCheckDefault">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="mt-4">
-                                                <div class="">
-                                                    <span class="float-start text-left text-white">Other</span>
-                                                    <div class="form-check form-switch custom-switch">
-                                                        <input class="form-check-input float-end" type="checkbox"
-                                                            id="flexSwitchCheckDefault">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="mt-4">
-                                                <div class="">
-                                                    <span class="float-start text-left text-white">Top</span>
-                                                    <div class="form-check form-switch custom-switch">
-                                                        <input class="form-check-input float-end" type="checkbox"
-                                                            id="flexSwitchCheckDefault">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="mt-4">
-                                                <div class="">
-                                                    <span class="float-start text-left text-white">Bottom</span>
-                                                    <div class="form-check form-switch custom-switch">
-                                                        <input class="form-check-input float-end" type="checkbox"
-                                                            id="flexSwitchCheckDefault">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <hr>
-
-                                            <div class="d-grid gap-2 col-12 mx-auto">
-                                                <button class="btn btn-search" type="button">SEARCH</button>
-                                            </div>
-
-
-
-
-
-
-                                        </div>
-
-
-
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="info.html">
-                                    <img src="assets/images/info.svg" class="menu-icon" alt="..." />
-                                    Info
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- sidebar -->
-
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6">
-
-                            <div class="cardhead-bg top-headers">
-
-                                <div class="row">
-                                    <div class="col-2 col-sm-2 col-md-2">
-                                        <div class="p-2 bd-highlight text-center">
-                                            <a class="" data-bs-toggle="collapse" href="#notificationitem" role="button"
-                                                aria-expanded="false" aria-controls="collapseExample">
-                                                <img src="assets/images/filter.svg" class="filter-img" alt="..." />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-8 col-sm-8 col-md-8">
-                                        <div class="p-2 bd-highlight text-center">
-                                            <a href="index.html">
-                                              <img src="assets/images/logo.svg" class="menu-logo" alt="..." />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-2 col-sm-2 col-md-2">
-                                        <div class="p-2 bd-highlight text-center">
-                                            <img src="assets/images/profile-icon.svg" class=" " alt="..." />
-                                        </div>
-                                    </div>
-
-
-
-                                </div>
-                            </div>
-                            <div class="collapse colpbiesnotification " id="notificationitem">
-                                <div class=" bropareabg  p-4">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control customfeald" id="floatingInput vust" placeholder="name@example.com">
-                                        <label class="labeler" for="floatingInput">Email address</label>
-                                      </div>
-                                      <div class="tagarea mt-2">
-                                        <dev class="heading-type">Types</dev><br>
-                                        <small class="text-muted text-white">Identify your body and personality type</small>
-                                        <div class="tags mt-2">
-                                            <span class="badge rounded-pill bg-customtag">JOCK</span>
-                                            <span class="badge rounded-pill bg-customtag">DILF</span>
-                                            <span class="badge rounded-pill bg-customtag">FRESHF</span>
-                                            <span class="badge rounded-pill bg-customtag">CHUBBY</span>
-                                            <span class="badge rounded-pill bg-customtag">FEM</span>
-                                            <span class="badge rounded-pill bg-customtag">FURRY</span>
-                                            <span class="badge rounded-pill bg-customtag">MUSCLE</span>
-                                            <span class="badge rounded-pill bg-customtag">MASCULINE</span>
-                                            <span class="badge rounded-pill bg-customtag">SMOOTH</span>
-                                            <span class="badge rounded-pill bg-customtag">FUNNY</span>
-                                            <span class="badge rounded-pill bg-customtag">BIG ASS</span>
-                                            <span class="badge rounded-pill bg-customtag">BIG COCK</span>
-                                            <span class="badge rounded-pill bg-customtag">TATTOOED</span>
-                                        </div>
-                                        <hr>
-
-                                        <dev class="heading-type">Tags</dev><br>
-                                        <small class="text-muted text-white">Select tags identifying the type of content you create</small>
-                                        <div class="tags mt-2">
-                                            <span class="badge rounded-pill bg-customtag">FISTING</span>
-                                            <span class="badge rounded-pill bg-customtag">GROUP</span>
-                                            <span class="badge rounded-pill bg-customtag">FEET</span>
-                                            <span class="badge rounded-pill bg-customtag">ROLE PLAY</span>
-                                            <span class="badge rounded-pill bg-customtag">AMATEUR</span>
-                                            <span class="badge rounded-pill bg-customtag">BONDAGE</span>
-                                            <span class="badge rounded-pill bg-customtag">COSPLAY</span>
-                                            <span class="badge rounded-pill bg-customtag">ANAL</span>
-                                            <span class="badge rounded-pill bg-customtag">ORAL</span>
-                                            <span class="badge rounded-pill bg-customtag">HARDCORE</span>
-                                            <span class="badge rounded-pill bg-customtag">MASTURBATION</span>
-                                            <span class="badge rounded-pill bg-customtag">PISSING</span>
-                                            <span class="badge rounded-pill bg-customtag">POV</span>
-                                        </div>
-<hr>
-<div class="d-grid gap-2 col-12 mx-auto">
-    <button class="btn btn-search" type="button">SEARCH</button>
-</div>
-
-
-                                      </div>
-
-                                  
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                        </div>
-                    </div>
-
-
-
-
-
-                    <div class="container mt-10">
-                        <div class="row">
-                            <div class="col">
-
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-6 mt-5">
-
-
-                                <div class="mein-topheading ">
-                                    Peoples
-                                </div>
-                                <div>
-
-
-                                    <div class="row overflow-productssection ">
-                                        <div class="col-4 col-sm-4 col-md-4">
-                                            <div class="p-2 bd-highlight text-center">
-                                                <a class="" data-bs-toggle="modal" href="#exampleModalToggle1"
-                                                    role="button">
-                                                    <img src="assets/images/image-gallery/1.svg" class="img-100per"
-                                                        alt="...">
-                                                </a>
-                                            </div>
-                                            <p class="text-center gallery-heading">Semen</p>
-                                        </div>
-                                        <div class="col-4 col-sm-4 col-md-4">
-                                            <div class="p-2 bd-highlight text-center">
-                                                <img src="assets/images/image-gallery/2.svg" class="img-100per"
-                                                    alt="...">
-                                                <p class="text-center gallery-heading">Semen</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 col-sm-4 col-md-4">
-                                            <div class="p-2 bd-highlight text-center">
-                                                <img src="assets/images/image-gallery/3.svg" class="img-100per "
-                                                    alt="...">
-                                                <p class="text-center gallery-heading">Semen</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-4 col-sm-4 col-md-4">
-                                            <div class="p-2 bd-highlight text-center">
-                                                <img src="assets/images/image-gallery/4.svg" class="img-100per"
-                                                    alt="...">
-                                            </div>
-                                            <p class="text-center gallery-heading">Semen</p>
-                                        </div>
-                                        <div class="col-4 col-sm-4 col-md-4">
-                                            <div class="p-2 bd-highlight text-center">
-                                                <img src="assets/images/image-gallery/5.svg" class="img-100per"
-                                                    alt="...">
-                                                <p class="text-center gallery-heading">Gloria Palms</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 col-sm-4 col-md-4">
-                                            <div class="p-2 bd-highlight text-center">
-                                                <img src="assets/images/image-gallery/6.svg" class="img-100per "
-                                                    alt="...">
-                                                <p class="text-center gallery-heading">Paul Landers</p>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-4 col-sm-4 col-md-4">
-                                            <div class="p-2 bd-highlight text-center">
-                                                <img src="assets/images/image-gallery/7.svg" class="img-100per"
-                                                    alt="...">
-                                            </div>
-                                            <p class="text-center gallery-heading">Semen</p>
-                                        </div>
-                                        <div class="col-4 col-sm-4 col-md-4">
-                                            <div class="p-2 bd-highlight text-center">
-                                                <img src="assets/images/image-gallery/8.svg" class="img-100per"
-                                                    alt="...">
-                                                <p class="text-center gallery-heading">Gloria Palms</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 col-sm-4 col-md-4">
-                                            <div class="p-2 bd-highlight text-center">
-                                                <img src="assets/images/image-gallery/9.svg" class="img-100per "
-                                                    alt="...">
-                                                <p class="text-center gallery-heading">Paul Landers</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-4 col-sm-4 col-md-4">
-                                            <div class="p-2 bd-highlight text-center">
-                                                <img src="assets/images/image-gallery/10.svg" class="img-100per"
-                                                    alt="...">
-                                            </div>
-                                            <p class="text-center gallery-heading">Semen</p>
-                                        </div>
-                                        <div class="col-4 col-sm-4 col-md-4">
-                                            <div class="p-2 bd-highlight text-center">
-                                                <img src="assets/images/image-gallery/11.svg" class="img-100per"
-                                                    alt="...">
-                                                <p class="text-center gallery-heading">Gloria Palms</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 col-sm-4 col-md-4">
-                                            <div class="p-2 bd-highlight text-center">
-                                                <img src="assets/images/image-gallery/12.svg" class=" img-100per"
-                                                    alt="...">
-                                                <p class="text-center gallery-heading">Paul Landers</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-
-
-
-                            </div>
-                            <div class="col">
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <footer class="footer mt-auto   menuon-mobile">
-                    <div class="container">
-                        <nav class=" ">
-                            <div class="">
-
-
-                                <div class="">
-                                    <div class="row">
-                                        <div class="col text-center">
-
-                                            <a class="nav-link  align-items-center gap-2" href="#">
-                                                <img src="assets/images/fav.svg" class="menu-icon" alt="..." />
-                                                <div class="mobile-menusize">Favorites</div>
-                                            </a>
-
-                                        </div>
-                                        <div class="col text-center">
-                                            <a class="nav-link  align-items-center gap-2" data-bs-toggle="modal"
-                                                href="#exampleModalToggle" role="button">
-                                                <img src="assets/images/menu.svg" class="menu-icon" alt="..." />
-                                                <div class="mobile-menusize">Menu</div>
-                                            </a>
-
-
-                                        </div>
-                                        <div class="col text-center">
-
-                                            <a class="nav-link  align-items-center gap-2" href="#">
-                                                <img src="assets/images/info.svg" class="menu-icon" alt="..." />
-                                                <div class="mobile-menusize">Info</div>
-                                            </a>
-
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                </footer>
-
-
-        </div>
-
-        <!-- popup -->
-
-        <div class="modal fade popppsdivmjdjje" id="exampleModalToggle" aria-hidden="true"
-            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered  ">
-                <div class="modal-content mobilepopupbg ">
-                    <!-- <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button> -->
-                    <div class="modal-header">
-                        <h5 class="modal-title text-center  " id="exampleModalToggleLabel">TOGGLE</h5>
-                    </div>
-                    <div class="modal-body">
-                        <div class="  filteroverflow">
-                            <div>
-                                <div>
-                                    <span class="float-start text-left text-white">1 Mile</span>
-                                    <span class="float-end text-right greytext">500+ Miles</span>
-                                </div>
-                                <div class="mt-10">
-                                    <input type="range" class="form-range custom-range" id="customRange1">
-                                </div>
-                            </div>
-                            <hr>
-                            <div>
-                                <div>
-                                    <span class="float-start text-left text-white">Age</span>
-                                    <span class="float-end text-right greytext">18-50</span>
-                                </div>
-                                <div class="mt-10">
-                                    <input type="range" class="form-range custom-range" id="customRange1">
-                                </div>
-                            </div>
-                            <hr>
-                            <div>
-                                <div>
-                                    <span class="float-start text-left text-white">Role</span>
-                                </div>
-                                <div class="mt-10">
-                                    <div class="">
-                                        <span class="float-start text-left text-white">Caucasian</span>
-                                        <div class="form-check form-switch custom-switch">
-                                            <input class="form-check-input float-end" type="checkbox"
-                                                id="flexSwitchCheckDefault">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mt-4">
-                                    <div class="">
-                                        <span class="float-start text-left text-white">Asian</span>
-                                        <div class="form-check form-switch custom-switch">
-                                            <input class="form-check-input float-end" type="checkbox"
-                                                id="flexSwitchCheckDefault">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="mt-4">
-                                    <div class="">
-                                        <span class="float-start text-left text-white">Latin/Hispanic</span>
-                                        <div class="form-check form-switch custom-switch">
-                                            <input class="form-check-input float-end" type="checkbox"
-                                                id="flexSwitchCheckDefault">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="mt-4">
-                                    <div class="">
-                                        <span class="float-start text-left text-white">Black</span>
-                                        <div class="form-check form-switch custom-switch">
-                                            <input class="form-check-input float-end" type="checkbox"
-                                                id="flexSwitchCheckDefault">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="mt-4">
-                                    <div class="">
-                                        <span class="float-start text-left text-white">Indian</span>
-                                        <div class="form-check form-switch custom-switch">
-                                            <input class="form-check-input float-end" type="checkbox"
-                                                id="flexSwitchCheckDefault">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="mt-4">
-                                    <div class="">
-                                        <span class="float-start text-left text-white">Other</span>
-                                        <div class="form-check form-switch custom-switch">
-                                            <input class="form-check-input float-end" type="checkbox"
-                                                id="flexSwitchCheckDefault">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="mt-4">
-                                    <div class="">
-                                        <span class="float-start text-left text-white">Top</span>
-                                        <div class="form-check form-switch custom-switch">
-                                            <input class="form-check-input float-end" type="checkbox"
-                                                id="flexSwitchCheckDefault">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="mt-4">
-                                    <div class="">
-                                        <span class="float-start text-left text-white">Bottom</span>
-                                        <div class="form-check form-switch custom-switch">
-                                            <input class="form-check-input float-end" type="checkbox"
-                                                id="flexSwitchCheckDefault">
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-
-                                <div class="d-grid gap-2 col-12 mx-auto">
-                                    <button class="btn btn-search" data-bs-target="#exampleModalToggle2"
-                                        data-bs-toggle="modal" data-bs-dismiss="modal">SEARCH</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Pop 2 -->
-
-        <div class="modal fade popppsdivmjdjje" id="exampleModalToggle1" aria-hidden="true"
-            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered ">
-                <div class="modal-content  ">
-                    <div class="popup-widtharea"
-                        style="background-image: url(assets/images/image.png); background-repeat: no-repeat;">
-                        <div class="modal-header">
-                            <h5 class="modal-title text-center text-white" id="exampleModalToggleLabel">SHOW ME</h5>
-                            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-                        </div>
-                        <div class="modal-body no-border" style="padding-top: 0px;">
-                            <div class="check-boxarea">
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class=" checkboxtext">
-                                        GAY
-                                    </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class=" checkboxtext">
-                                        BISEXUAL
-                                    </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class=" checkboxtext">
-                                        STRAIGHT
-                                    </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class=" checkboxtext">
-                                        TRANS
-                                    </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class=" checkboxtext">
-                                        HIV UNDECTABLE
-                                    </label>
-                                </div>
-
-                            </div>
-
-                            <div class="textarea-appo glassbgs text-center commentsareas">
-                                *red revise mock-upThesemen.orgwebsites is transparent ie non members area is the same
-                                as themembers area except communication with other Semen is not available to nonmembers
-                                visiting the website*red revise mock-up Thesemen.orgwebsites is transparent ie non
-                                members area is the same as themembers area except communication*red revise
-                                mock-upThesemen.orgwebsites is transparent ie non members area is the same as themembers
-                                area except communication with other Semen is not available to nonmembers visiting the
-                                website*red revise mock-up Thesemen.orgwebsites is transparent ie non members area is
-                                the same as themembers area except communication with other Semen is not available to
-                                nonmembers visiting the website *red revise mock-upThesemen.orgwebsites is transparent
-                                ie
-
-                            </div>
-
-                            <div class="d-grid gap-2 col-12 mx-auto mt-4">
-                                <button class="btn btn-search" type="button">
-                                    <span class="agretext">I AGREE</span> <img src="assets/images/swapicon.svg" class=""
-                                        alt="...">
-                                </button>
-                                <button class="btn btn-exit mt-2 mb-3" data-bs-target="#exampleModalToggle2"
-                                    data-bs-toggle="modal" data-bs-dismiss="modal">
-                                    <span class="agretext">EXIT</span>
-                                </button>
-                            </div>
-
-
-                        </div>
-                        <br /> <br />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-        </main>
-    </div>
-    </div>
-    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="assets/dashboard.js"></script>
+	<!-- header -->
+	<div class="header_bg">
+		<div class="container">
+			<div class="header">
+				<div class="head-t">
+					<div class="logo">
+						<a href="index.html"><img src="images/logo.png" class="img-responsive" height="150" width="150"
+								alt="" /> </a>
+					</div>
+					<!-- start header_right -->
+					<div class="header_right">
+						<div class="rgt-bottom">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="#">Contact</a></li>
+							<!-- <li><a href="contact.html">Sitemap</a></li> -->
+							<!-- <li a="" href="#">
+					<div class="drop-down">
+							<select class="d-arrow">
+								<option value="Eng">Eng</option>
+								<option value="Fren">Fren</option>
+								<option value="Russ">Russ</option>
+								<option value="Chin">Chin</option>
+							</select>
+					</div>
+				</li> -->
+							<!-- <li a="" href="#">
+					<div class="drop-down">
+							<select class="d-arrow">
+								<option value="$">$</option>
+								<option value="€">€</option>
+							</select>
+					</div>
+				</li>				 -->
+							<div class="clearfix"> </div>
+						</div>
+						<div class="se-ca">
+							<div class="search">
+								<form>
+									<input type="text" value="" placeholder="search...">
+									<input type="submit" value="">
+								</form>
+							</div>
+							<!-- <div class="cart box_1">
+					<a href="checkout.html">
+						<h3>CART <span class="simpleCart_total"> ($0.00) </span>  <img src="images/bag.png" alt=""></h3>
+					</a>	
+					<p><a href="javascript:;" class="simpleCart_empty">(empty card)</a></p>
+					<div class="clearfix"> </div>
+				</div> -->
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+
+				<!-- start header menu -->
+				<div class="header-top">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+									data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+
+							</div>
+
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li class="active"><a href="index.html">Home </a></li>
+									<!-- <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="products.html">Action</a></li>
+            <li><a href="products.html">Another action</a></li>
+            <li><a href="products.html">Something else here</a></li>
+          </ul>
+        </li> -->
+									<!-- <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sale <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+            <li><a href="https://wa.me/+923146536754">Action</a></li>
+            <li><a href="https://wa.me/+923146536754">Another action</a></li>
+            <li><a href="https://wa.me/+923146536754">Something else here</a></li>
+           
+          </ul>
+        </li> -->
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Contact Us</a></li>
+								</ul>
+
+
+							</div><!-- /.navbar-collapse -->
+						</div><!-- /.container-fluid -->
+					</nav>
+				</div>
+				<!-- start header menu -->
+			</div>
+		</div>
+	</div>
+	<!-- start banner -->
+	<div class="banner">
+		<div class="container">
+			<div class="col-md-6 banner-left">
+				<div class="header-slider">
+					<div class="slider">
+						<div class="callbacks_container">
+							<ul class="rslides" id="slider">
+								<li>
+									<img src="images/1.jpg" class="img-responsive" alt="">
+									<!-- <div class="caption">
+									<h3>Woven label </h3>
+									<p>hight quality product </p>
+								</div> -->
+								</li>
+								<li>
+									<img src="images/2.jpg" class="img-responsive" alt="">
+									<!-- <div class="caption">
+									<h3>Ultrasound Machine</h3>
+									<p>Maecenas malesuada elit lectus felis,igula.</p>
+								</div> -->
+								</li>
+								<li>
+									<img src="images/3.jpg" class="img-responsive" alt="">
+									<!-- <div class="caption">
+									<h3>Etiam ullamcorper. e</h3>
+									<p>Suspendisse a pellentesque dui, non felis. </p>
+								</div> -->
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 banner-right">
+				<div class="col-md-6 banner-top">
+					<!-- <h6>Dialysis Chairs</h6> -->
+
+				</div>
+				<div class="col-md-6 banner-top1">
+					<!-- <h6>Surgical Bed</h6> -->
+
+				</div>
+				<div class="col-md-6 banner-top2">
+					<!-- <h6>Wheel Chairs</h6> -->
+
+				</div>
+				<div class="col-md-6 banner-top3">
+					<!-- <h6>Radiant Warmers</h6> -->
+
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!-- end banner -->
+
+	<div class="special">
+		<div class="container">
+			<div class="specia-top">
+				<ul class="grid_2">
+					<li>
+						<a href="https://wa.me/+923146536754"><img src="images/2.jpg" class="img-responsive" alt=""></a>
+						<div class="special-info grid_1 simpleCart_shelfItem">
+							<h5>Custom Woven Label</h5>
+							<div class="item_add"><span class="item_price">
+									<h6>We Manufacture high quality label on your order</h6>
+								</span></div>
+							<div class="item_add"><span class="item_price"><a href="https://wa.me/+923146536754">Add to cart</a></span></div>
+						</div>
+					</li>
+					<li>
+						<a href="https://wa.me/+923146536754"><img src="images/3.jpg" class="img-responsive" alt=""></a>
+						<div class="special-info grid_1 simpleCart_shelfItem">
+							<h5>Custom Woven Label</h5>
+							<div class="item_add"><span class="item_price">
+									<h6>We Manufacture high quality label on your order</h6>
+								</span></div>
+							 <div class="item_add">
+								<span class="item_price"><a href="https://wa.me/+923146536754">Add to cart</a></span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="https://wa.me/+923146536754"><img src="images/6.jpg" class="img-responsive" alt=""></a>
+						<div class="special-info grid_1 simpleCart_shelfItem">
+							<h5>Custom School Tie</h5>
+							<div class="item_add"><span class="item_price">
+									<h6>We Manufacture high quality School Tie on your order</h6>
+								</span></div>
+							<div class="item_add"><span class="item_price"><a href="https://wa.me/+923146536754">Add to cart</a></span></div>
+						</div>
+					</li>
+					<li>
+						<a href="https://wa.me/+923146536754"><img src="images/5.jpg" class="img-responsive" alt=""></a>
+						<div class="special-info grid_1 simpleCart_shelfItem">
+							<h5>School Badge</h5>
+							<div class="item_add"><span class="item_price">
+									<h6>We Manufacture high quality School Badge on your order</h6>
+								</span></div>
+							<div class="item_add"><span class="item_price"><a href="https://wa.me/+923146536754">Add to cart</a></span></div>
+						</div>
+					</li>
+					<div class="clearfix"> </div>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- special -->
+	<div class="special">
+		<div class="container">
+			<div class="specia-top">
+				<ul class="grid_2">
+					<li>
+						<a href="https://wa.me/+923146536754"><img src="images/7.jpg" class="img-responsive" alt=""></a>
+						<div class="special-info grid_1 simpleCart_shelfItem">
+							<h5>Custom Woven Label</h5>
+
+							<div class="item_add"><span class="item_price">
+									<h6>We Manufacture high quality Labels on your order</h6>
+								</span></div>
+							<div class="item_add"><span class="item_price"><a href="https://wa.me/+923146536754">Add to cart</a></span></div>
+						</div>
+					</li>
+					<li>
+						<a href="https://wa.me/+923146536754"><img src="images/8.jpg" class="img-responsive" alt=""></a>
+						<div class="special-info grid_1 simpleCart_shelfItem">
+							<h5>Custom Woven Label</h5>
+
+							<div class="item_add"><span class="item_price">
+								<h6>We Manufacture high quality Labels on your order</h6>
+							</span></div>
+							<div class="item_add"><span class="item_price"><a href="https://wa.me/+923146536754">Add to cart</a></span></div>
+						</div>
+					</li>
+					<li>
+						<a href="https://wa.me/+923146536754"><img src="images/4.jpg" class="img-responsive" alt=""></a>
+						<div class="special-info grid_1 simpleCart_shelfItem">
+							<h5>Custom Woven Label</h5>
+
+							<div class="item_add"><span class="item_price">
+								<h6>We Manufacture high quality Labels on your order</h6>
+
+								</span></div>
+							<div class="item_add"><span class="item_price"><a href="https://wa.me/+923146536754">Add to cart</a></span></div>
+						</div>
+					</li>
+					<li>
+						<a href="https://wa.me/+923146536754"><img src="images/10.jpg" class="img-responsive" alt=""></a>
+						<div class="special-info grid_1 simpleCart_shelfItem">
+							<h5>Custom Woven Label </h5>
+							<div class="item_add"><span class="item_price">
+								<h6>We Manufacture high quality Labels on your order</h6>
+
+								</span></div>
+							<div class="item_add"><span class="item_price"><a href="https://wa.me/+923146536754">Add to cart</a></span></div>
+						</div>
+					</li>
+					<div class="clearfix"> </div>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="foot-top">
+		<div class="container">
+			<div class="col-md-6 s-c">
+				<li>
+					<div class="fooll">
+						<h5>follow us on</h5>
+					</div>
+				</li>
+				<li>
+					<div class="social-ic">
+						<ul>
+							<li><a href="#"><i class="facebok"> </i></a></li>
+							<li><a href="#"><i class="twiter"> </i></a></li>
+							<li><a href="#"><i class="goog"> </i></a></li>
+							<li><a href="#"><i class="inst"> </i></a></li>
+							<div class="clearfix"></div>
+						</ul>
+					</div>
+				</li>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="col-md-6 s-c">
+				<div class="stay">
+					<div class="stay-left">
+						<form>
+							<input type="text" placeholder="Enter your email " required="">
+						</form>
+					</div>
+					<div class="btn-1">
+						<form>
+							<input type="submit" value="join">
+						</form>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="col-md-3 cust">
+				<h4>CUSTOMER CARE</h4>
+				<li><a href="#">Help Center</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">How To Buy</a></li>
+				<li><a href="#">Delivery</a></li>
+			</div>
+			<div class="col-md-3 abt">
+				<h4>ABOUT US</h4>
+				<li><a href="#">Our Stories</a></li>
+				<li><a href="#">Press</a></li>
+				<li><a href="#">Career</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</div>
+			<div class="col-md-3 myac">
+				<h4>MY ACCOUNT</h4>
+				<li><a href="#">Register</a></li>
+				<li><a href="#">My Cart</a></li>
+				<li><a href="#">Order History</a></li>
+				<li><a href="#">Payment</a></li>
+			</div>
+			<div class="col-md-3 our-st">
+				<h4>OUR STORE</h4>
+				<li><i class="phone"  > </i>+92 314 6536754</li>
+				<li><a href="mailto:wowentag@gmail.com"><i class="mail"> </i>wowentag@gmail.com </a></li>
+
+			</div>
+			<div class="clearfix"> </div>
+			<p>Copyrights © 2025 WOVENTAG. All rights reserved </p>
+		</div>
+	</div>
+	<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 0;"></span> <span
+			id="toTopHover" style="opacity: 0;"> </span></a>
 </body>
 
 </html>
